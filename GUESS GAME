@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# WHILE LOOP GUESS GAME 
+Number=$((RANDOM % 10 + 1))
+guess=0
+
+echo "===================================================================" 
+echo "WELCOME TO THE GUESSING GAME!"
+echo "guess a number between 1-10 and win SPOTLIGHT Of the YEAR!"
+
+while [ $guess -ne $Number ];
+	do
+		echo "Guess a number:"
+		read guess
+			if [ $guess -lt $Number ]; then
+			
+				echo "Close one! Try Again."
+				
+			elif [ $guess -gt $Number ]; then
+			
+				echo "Too bad, you missed again. Let's go one more time!"
+				elif [ $guess -eq $Number ]; then
+				
+					echo "======FINALLY! YOU GOT IT !!!========"
+				fi
+done
